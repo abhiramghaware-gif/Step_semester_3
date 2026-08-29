@@ -3,23 +3,24 @@ package oop;
 public class P01VotingEligibilityChecker {
 
     public static void checkVotingEligibility(int age) {
+        // Check if the age is 18 or older
         if (age >= 18) {
             System.out.println("Eligible to vote");
         } else {
+            // Otherwise, they are under 18
             System.out.println("Not eligible to vote");
         }
     }
 
     public static void main(String[] args) {
-        System.out.println("checkVotingEligibility(20)");
-        System.out.println("Expected:\nEligible to vote");
-        System.out.println("Actual:");
+        // Test Case 1: 20 years old
+        System.out.println("Test 1 (Expected: Eligible to vote):");
         checkVotingEligibility(20);
-        System.out.println();
+        
+        System.out.println(); // blank line for spacing
 
-        System.out.println("checkVotingEligibility(16)");
-        System.out.println("Expected:\nNot eligible to vote");
-        System.out.println("Actual:");
+        // Test Case 2: 16 years old
+        System.out.println("Test 2 (Expected: Not eligible to vote):");
         checkVotingEligibility(16);
     }
 }
